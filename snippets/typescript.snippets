@@ -1,0 +1,18 @@
+extends javascript
+
+snippet rfc 'React functional component'
+  import * as React from 'react'
+
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  interface ${FILE_NAME}Props extends React.HTMLAttributes<HTMLDivElement> {
+    $1
+  }
+
+  function ${FILE_NAME}(props: ${FILE_NAME}Props) {
+    const { children, ...other } = props
+
+    return <div {...other}>{${2:children}}</div>
+  }
+
+  export default ${FILE_NAME}
+
