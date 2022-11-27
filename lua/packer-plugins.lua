@@ -25,9 +25,8 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-web-devicons'
 
   -- Theme and colors
-  use 'ellisonleao/gruvbox.nvim'
+  use 'EdenEast/nightfox.nvim'
   use 'nvim-lualine/lualine.nvim'
-  -- use 'ishan9299/nvim-solarized-lua'
 
   -- Keybindings suggestions
   use 'folke/which-key.nvim'
@@ -51,8 +50,9 @@ return require('packer').startup(function(use)
   -- Format runner
   use 'mhartington/formatter.nvim'
 
-  -- Git command inside vim
+  -- Git commands inside vim
   use 'tpope/vim-fugitive'
+  use 'tpope/vim-rhubarb'
 
   -- EditorConfig and such
   use 'tpope/vim-sleuth'
