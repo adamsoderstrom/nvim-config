@@ -8,7 +8,7 @@ require('nvim-tree').setup({
       list = {
         { key = { 'l', '<CR>', 'o' }, cb = require('nvim-tree.lib').edit },
         { key = 'h', cb = require('nvim-tree.lib').close_node },
-        { key = 'v', cb = require('nvim-tree.lib').vsplit },
+        -- { key = 'v', cb = require('nvim-tree.lib').vsplit },
         -- { key = 's', cb = require('nvim-tree.lib').split },
         -- { key = 't', cb = require('nvim-tree.lib').tabnew },
         -- { key = 'i', cb = require('nvim-tree.lib').cd },
