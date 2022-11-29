@@ -1,6 +1,6 @@
-vim.wo.relativenumber = true
 vim.o.guifont = "Hack"
 vim.opt.colorcolumn = "80,100"
+vim.wo.relativenumber = true
 
 -- highlight on yank
 vim.api.nvim_command("au TextYankPost * silent! lua vim.highlight.on_yank()")
