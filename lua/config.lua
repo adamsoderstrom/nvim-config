@@ -1,4 +1,5 @@
 vim.o.guifont = "Hack"
+vim.o.showtabline = 2
 vim.opt.colorcolumn = "80,100"
 vim.wo.relativenumber = true
 

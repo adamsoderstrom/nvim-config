@@ -32,6 +32,9 @@ return require("packer").startup(function(use)
 	use("EdenEast/nightfox.nvim")
 	use("nvim-lualine/lualine.nvim")
 
+	-- Nicer tabs
+	use("nanozuki/tabby.nvim")
+
 	-- Keybindings suggestions
 	use("folke/which-key.nvim")
 
