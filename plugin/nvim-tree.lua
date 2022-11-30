@@ -1,4 +1,9 @@
-require('nvim-tree').setup({
+local status_ok, tree = pcall(require, "nvim-tree")
+if not status_ok then
+  return
+end
+
+tree.setup({
   sync_root_with_cwd = true,
   respect_buf_cwd = true,
   view = {
@@ -6,16 +11,16 @@ require('nvim-tree').setup({
     mappings = {
       custom_only = false,
       list = {
-        { key = { 'l', '<CR>', 'o' }, cb = require('nvim-tree.lib').edit },
-        { key = 'h', cb = require('nvim-tree.lib').close_node },
-        -- { key = 'v', cb = require('nvim-tree.lib').vsplit },
-        -- { key = 's', cb = require('nvim-tree.lib').split },
-        -- { key = 't', cb = require('nvim-tree.lib').tabnew },
-        -- { key = 'i', cb = require('nvim-tree.lib').cd },
-        -- { key = 'r', cb = require('nvim-tree.lib').refresh },
-        -- { key = 'a', cb = require('nvim-tree.lib').create },
-        -- { key = 'd', cb = require('nvim-tree.lib').remove },
-        -- { key = 'R', cb = require('nvim-tree.lib').rename },
+        { key = { "l", "<CR>", "o" }, cb = require("nvim-tree.lib").edit },
+        { key = "h", cb = require("nvim-tree.lib").close_node },
+        -- { key = "v", cb = require("nvim-tree.lib").vsplit },
+        -- { key = "s", cb = require("nvim-tree.lib").split },
+        -- { key = "t", cb = require("nvim-tree.lib").tabnew },
+        -- { key = "i", cb = require("nvim-tree.lib").cd },
+        -- { key = "r", cb = require("nvim-tree.lib").refresh },
+        -- { key = "a", cb = require("nvim-tree.lib").create },
+        -- { key = "d", cb = require("nvim-tree.lib").remove },
+        -- { key = "R", cb = require("nvim-tree.lib").rename },
       },
     },
   },
@@ -30,5 +35,5 @@ require('nvim-tree').setup({
 })
 
 local opts = { noremap = true, silent = true }
--- vim.keymap.set('n', '<leader>e', ':NvimTreeFindFileToggle<CR>', opts)
+-- vim.keymap.set("n", "<leader>e", ":NvimTreeFindFileToggle<CR>", opts)
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", opts)

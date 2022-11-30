@@ -1,4 +1,9 @@
-require("tabby.tabline").use_preset("active_wins_at_tail", {
+local status_ok, tabby = pcall(require, "tabby.tabline")
+if not status_ok then
+  return
+end
+
+tabby.use_preset("active_wins_at_tail", {
 	theme = {
 		fill = "TabLineFill", -- tabline background
 		head = "TabLine", -- head element highlight
