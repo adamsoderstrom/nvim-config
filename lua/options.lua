@@ -17,6 +17,7 @@ local options = {
 	splitbelow = true, -- Force all horizontal splits to go below current window
 	splitright = true, -- Force all vertical splits to go to the right of current window
 	tabstop = 2, -- Insert 2 spaces for a tab
+	termguicolors = true, -- set term gui colors (most terminals support this)
 	updatetime = 300, -- Faster completion (4000ms default)
 	wrap = false, -- Display lines as one long line
 }
