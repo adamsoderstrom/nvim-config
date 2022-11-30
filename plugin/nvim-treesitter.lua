@@ -1,38 +1,17 @@
-require('nvim-treesitter.configs').setup({
-  ensure_installed = {
-    'css',
-    'dockerfile',
-    'fish',
-    'git_rebase',
-    'gitattributes',
-    'gitignore',
-    'glsl',
-    'go',
-    'graphql',
-    'html',
-    'http',
-    'javascript',
-    'json',
-    'lua',
-    'php',
-    'python',
-    'rust',
-    'scss',
-    'sql',
-    'tsx',
-    'typescript',
-    'yaml',
-  },
-  highlight = {
-    enable = true,
-  },
-  autotag = {
-    enable = true,
-  },
-  indent = {
-    enable = false,
-  },
-  context_commentstring = {
-    enable = true,
-  },
+local status_ok, configs = pcall(require, "nvim-treesitter.configs")
+if not status_ok then
+	return
+end
+
+configs.setup({
+  ensure_installed = { "bash", "c", "javascript", "json", "lua", "python", "typescript", "tsx", "css", "rust", "java", "yaml", "markdown", "markdown_inline" }, -- one of "all" or a list of languages
+	ignore_install = { "phpdoc" }, -- List of parsers to ignore installing
+	highlight = {
+		enable = true, -- false will disable the whole extension
+		disable = { "css" }, -- list of language that will be disabled
+	},
+	autopairs = {
+		enable = true,
+	},
+	indent = { enable = true, disable = { "python", "css" } },
 })
