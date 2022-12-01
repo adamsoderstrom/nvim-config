@@ -17,8 +17,8 @@ require("luasnip.loaders.from_vscode").load({ paths = { "~/.config/nvim/vsc-snip
 -- <c-s> is my expansion key
 -- This will expand the current item or jump to the next item within the snippet.
 vim.keymap.set({ "i", "s" }, "<c-s>", function()
-  if ls.expand_or_jumpable() then
-    ls.expand_or_jump()
+  if luasnip.expand_or_jumpable() then
+    luasnip.expand_or_jump()
   end
 end, { silent = true })
 
