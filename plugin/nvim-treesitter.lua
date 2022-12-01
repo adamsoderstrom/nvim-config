@@ -4,14 +4,43 @@ if not status_ok then
 end
 
 configs.setup({
-  ensure_installed = { "bash", "c", "javascript", "json", "lua", "python", "typescript", "tsx", "css", "rust", "java", "yaml", "markdown", "markdown_inline" }, -- one of "all" or a list of languages
-	ignore_install = { "phpdoc" }, -- List of parsers to ignore installing
+  ensure_installed = {
+		"css",
+		"dockerfile",
+		"fish",
+		"git_rebase",
+		"gitattributes",
+		"gitignore",
+		"glsl",
+		"go",
+		"graphql",
+		"html",
+		"http",
+		"javascript",
+		"json",
+		"lua",
+		"php",
+		"python",
+		"rust",
+		"scss",
+		"sql",
+		"tsx",
+		"typescript",
+		"yaml",
+	},
 	highlight = {
-		enable = true, -- false will disable the whole extension
-		disable = { "css" }, -- list of language that will be disabled
+		enable = true,
 	},
 	autopairs = {
 		enable = true,
 	},
-	indent = { enable = true, disable = { "python", "css" } },
+  autotag = {
+    enable = true,
+  },
+	indent = {
+    enable = true,
+  },
+  context_commentstring = {
+    enable = true,
+  },
 })
