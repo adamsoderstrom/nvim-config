@@ -60,19 +60,18 @@ return require("packer").startup(function(use)
 	use("nvim-telescope/telescope-file-browser.nvim")
 
 	-- File explorer tree
-	-- Also install Ripgrep on your system, Telescope will automatically pick it up.
-	-- Ripgrep will respect gitignore rules and automatically skip hidden files/directories and binary files.
-	-- https://github.com/nvim-telescope/telescope.nvim/issues/522#issuecomment-777384452
-	-- https://github.com/BurntSushi/ripgrep#installation
 	use({
 		"nvim-tree/nvim-tree.lua",
-		-- commit = "7282f7de8aedf861fe0162a559fc2b214383c51c",
 		requires = { "nvim-tree/nvim-web-devicons" },
 	})
 	use("nvim-tree/nvim-web-devicons")
 
 	-- Syntax highlighting
-	use({ "nvim-treesitter/nvim-treesitter", commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac" })
+	use({
+		"nvim-treesitter/nvim-treesitter",
+		-- Lock to commit as latest is buggy
+		commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
+	})
 
 	-- Theme and colors
 	use("EdenEast/nightfox.nvim")
@@ -81,7 +80,6 @@ return require("packer").startup(function(use)
 	-- A snazzy bufferline
 	use({
 		"akinsho/bufferline.nvim",
-		-- commit = "83bf4dc7bff642e145c8b4547aa596803a8b4dc4",
 		requires = "nvim-tree/nvim-web-devicons",
 	})
 
