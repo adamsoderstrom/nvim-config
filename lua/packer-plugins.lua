@@ -66,16 +66,24 @@ return require("packer").startup(function(use)
 	-- https://github.com/BurntSushi/ripgrep#installation
 	use({
 		"nvim-tree/nvim-tree.lua",
+		-- commit = "7282f7de8aedf861fe0162a559fc2b214383c51c",
 		requires = { "nvim-tree/nvim-web-devicons" },
 	})
 	use("nvim-tree/nvim-web-devicons")
+
+	-- Syntax highlighting
+	use({ "nvim-treesitter/nvim-treesitter", commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac" })
 
 	-- Theme and colors
 	use("EdenEast/nightfox.nvim")
 	use("nvim-lualine/lualine.nvim")
 
-	-- Nicer tabs
-	use("nanozuki/tabby.nvim")
+	-- A snazzy bufferline
+	use({
+		"akinsho/bufferline.nvim",
+		-- commit = "83bf4dc7bff642e145c8b4547aa596803a8b4dc4",
+		requires = "nvim-tree/nvim-web-devicons",
+	})
 
 	-- Keybindings suggestions
 	use("folke/which-key.nvim")
@@ -112,14 +120,11 @@ return require("packer").startup(function(use)
 	-- Additional powerful text objects
 	use("wellle/targets.vim")
 
-	-- ???
+	-- Auto symbol pairs
 	use("windwp/nvim-autopairs")
 
 	-- Use treesitter to auto close and auto rename html tag
 	use("windwp/nvim-ts-autotag")
-
-	-- Treesitter configurations and abstraction layer
-	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
