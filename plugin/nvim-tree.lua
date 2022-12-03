@@ -23,10 +23,8 @@ nvim_tree.setup({
 		enable = true,
 		show_on_dirs = true,
 	},
-	-- update_focused_file = {
-	-- 	enable = true,
-	-- 	update_cwd = true,
-	-- },
+	sync_root_with_cwd = true,
+	respect_buf_cwd = true,
 	view = {
 		adaptive_size = true,
 		side = "left",
