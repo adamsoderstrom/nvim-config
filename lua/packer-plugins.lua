@@ -93,9 +93,6 @@ return require("packer").startup(function(use)
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 	use("tpope/vim-commentary")
 
-	-- Smooth scrolling
-	use("karb94/neoscroll.nvim")
-
 	-- Snippet engine
 	use("L3MON4D3/LuaSnip")
 
