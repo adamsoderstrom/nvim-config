@@ -74,7 +74,7 @@ return require("packer").startup(function(use)
 	})
 
 	-- Theme and colors
-	use("EdenEast/nightfox.nvim")
+	use("patstockwell/vim-monokai-tasty")
 	use("nvim-lualine/lualine.nvim")
 
 	-- A snazzy bufferline
