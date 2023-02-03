@@ -12,10 +12,13 @@ gitsigns.setup({
 
     -- hunks
 
+    -- -- preview_hunk
+    map('n', '<leader>ghp', ':Gitsigns preview_hunk<CR>')
+    map('v', '<leader>ghp', ':Gitsigns preview_hunk<CR>')
+
     -- -- stage_hunk
     map('n', '<leader>ghs', ':Gitsigns stage_hunk<CR>')
     map('v', '<leader>ghs', ':Gitsigns stage_hunk<CR>')
-
 
     -- -- undo_stage_hunk
     map('n', '<leader>ghu', ':Gitsigns undo_stage_hunk<CR>')
