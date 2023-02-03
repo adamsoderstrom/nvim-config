@@ -74,7 +74,7 @@ return require("packer").startup(function(use)
 	})
 
 	-- Theme and colors
-	use("patstockwell/vim-monokai-tasty")
+	use("tanvirtin/monokai.nvim")
 	use("nvim-lualine/lualine.nvim")
 
 	-- A snazzy bufferline
