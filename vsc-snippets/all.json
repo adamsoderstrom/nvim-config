@@ -19,6 +19,10 @@
     "prefix": "log",
     "body": ["console.log($1)"]
   },
+  "Print object to console": {
+    "prefix": "logo",
+    "body": ["console.log({$1})"]
+  },
   "Import react": {
     "prefix": "irea",
     "body": "import * as React from 'react'"
@@ -36,11 +40,19 @@
     "body": "import { $2 } from '@noaignite/$1'"
   },
   "Export default": {
-    "prefix": "ee",
+    "prefix": "e",
+    "body": ["export default $1"]
+  },
+  "Export default from": {
+    "prefix": "ed",
     "body": ["export { default } from './${1:Component}'"]
   },
-  "Export default as": {
-    "prefix": "eee",
+  "Export all from": {
+    "prefix": "e*",
+    "body": ["export * from './${1:Component}'"]
+  },
+  "Export default as from": {
+    "prefix": "eda",
     "body": ["export { default as ${1:Component} } from './${1:Component}'"]
   },
   "Import module": {
