@@ -74,7 +74,7 @@ return require("packer").startup(function(use)
 	})
 
 	-- Theme and colors
-	use("tanvirtin/monokai.nvim")
+	use("sainnhe/sonokai")
 	use("nvim-lualine/lualine.nvim")
 
 	-- A snazzy bufferline
