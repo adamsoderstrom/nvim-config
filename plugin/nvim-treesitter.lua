@@ -8,7 +8,6 @@ configs.setup({
 		"css",
 		"dockerfile",
 		"fish",
-		"git_rebase",
 		"gitattributes",
 		"gitignore",
 		"glsl",
