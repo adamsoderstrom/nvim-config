@@ -77,16 +77,17 @@ bufferline.setup({
 			fg = { attribute = "fg", highlight = "TabLine" },
 			bg = { attribute = "bg", highlight = "TabLine" },
 		},
+
 		background = {
 			fg = { attribute = "fg", highlight = "TabLine" },
-			bg = { attribute = "bg", highlight = "TabLine" },
+			bg = { attribute = "bg", highlight = "Normal" },
 		},
 
-		-- buffer_selected = {
-		--   fg = {attribute='fg',highlight='#ff0000'},
-		--   bg = {attribute='bg',highlight='#0000ff'},
-		--   gui = 'none'
-		--   },
+		buffer_selected = {
+			fg = { attribute = "bg", highlight = "Normal" },
+			bg = { attribute = "fg", highlight = "Normal" },
+		},
+
 		buffer_visible = {
 			fg = { attribute = "fg", highlight = "TabLine" },
 			bg = { attribute = "bg", highlight = "TabLine" },
@@ -161,8 +162,8 @@ bufferline.setup({
 		--   bg = {attribute='bg',highlight='TabLine'}
 		--   },
 		indicator_selected = {
-			fg = { attribute = "fg", highlight = "LspDiagnosticsDefaultHint" },
-			bg = { attribute = "bg", highlight = "Normal" },
+			fg = { attribute = "fg", highlight = "TabLine" },
+			bg = { attribute = "bg", highlight = "TabLine" },
 		},
 	},
 })
